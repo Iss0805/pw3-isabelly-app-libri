@@ -1,0 +1,16 @@
+
+// props é igual ao json -- parametros titulos e autor são json
+const CardBooks = ({titulo,autor}) => {
+
+
+
+    return(
+        <div>
+            <h3>{titulo}</h3>
+            <p>{autor}</p>
+        </div>
+    )
+
+}
+
+export default CardBooks;
