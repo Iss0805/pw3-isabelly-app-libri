@@ -1,6 +1,12 @@
 import './App.css'
-// import CardBooks from './components/CardBooks';
+import { BrowserRouter, Routes , Route } from 'react-router-dom';
 import NavBar from './components/layout/Navbar';
+import Container from './components/layout/Container';
+import ListBooks from './components/pages/ListBooks';
+import CreateBooks from './components/pages/CreateBooks';
+ import CardBooks from './components/CardBooks';
+import Home from './components/pages/Home';
+
 //importa o arquivo de imagem da capa do livro
 
 // import capaLivro from './assets/livross/acaba.jpg'
@@ -14,11 +20,70 @@ function App() {
   return (
     // fragment  <>  -> 
    <> 
+  {/* ESTRURURA DE NAVEGAÇÃO */}
+    <BrowserRouter>
+      
+      <Container>
+        <Routes>
+
+           <Route path='/' element={<NavBar/>}>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/listBooks' element={<ListBooks/>}/>
+              <Route path='/createBooks' element={<CreateBooks/>}/>
+              
+
+
+        </Route>
+
+        </Routes>
+
+      </Container>
+
+    </BrowserRouter>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     {/* <h1>TESTE</h1> */}
 
-    <NavBar></NavBar>
+    {/* <NavBar/>
+   
 
+    <Container> 
+     <Home/>
+    <ListBooks/> 
+    <CreateBooks/>
+   
+    </Container>*/}
+
+    
 
 
 

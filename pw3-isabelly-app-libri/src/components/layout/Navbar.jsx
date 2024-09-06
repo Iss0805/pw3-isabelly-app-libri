@@ -1,21 +1,38 @@
 import style from './Navbar.module.css'
+import { Link, Outlet } from 'react-router-dom';
 
 const NavBar = () =>{
 
     return(
+
+        <>
+
         <nav className={style.NavBar}>
 
 
         <ul className={style.list}>
-        <li className={style.item}><img className={style.logo} src="./book.png"/></li>
+        <Link to='/'>
+            <li className={style.item}><img className={style.logo} src="./book.png"/></li>
+        </Link>
 
-        <li className={style.item}>HOME</li>
-        <li className={style.item}>CADASTRAR LIVROS</li>
-        <li className={style.item}>LISTAR LIVROS</li>
+        <Link to='/'>
+            <li className={style.item}>HOME</li>
+        </Link>
 
+        <Link to='/createBooks'>
+            <li className={style.item}>CADASTRAR LIVROS</li>
+        </Link>
+
+        <Link to='/listBooks'>
+            <li className={style.item}>LISTAR LIVROS</li>
+        </Link>
 
         </ul>
         </nav>
+        <Outlet/>
+        </>
+
+        
 
 
     )
