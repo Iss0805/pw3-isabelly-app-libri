@@ -1,10 +1,10 @@
 import styles from  '../forms/Button2.module.css'
 
-function Button2({rotulo}){
+function Button({rotulo}){
     return(
 
-        <div className={styles.button2}>
-           <button2>{rotulo}</button2>
+        <div className={styles.button}>
+           <button>{rotulo}</button>
         </div>
 
 
@@ -12,4 +12,4 @@ function Button2({rotulo}){
     )
 }
 
-export default Button2
+export default Button
